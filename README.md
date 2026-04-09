@@ -1,13 +1,9 @@
 Median iOS
 ============
 
-This is the native iOS code used by https://median.co/
+This is the native iOS code used by https://carupptr.com team
 
-It allows the creation of full-featured native apps from existing mobile-optimized websites.
+It allows the creation of full-featured native apps from existing mobile-optimized website.
 
-How to use
-------------
 
-Build instructions at https://median.co/docs/build-ios-from-source
 
-Licensing information available at https://median.co/license
