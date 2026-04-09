@@ -1,4 +1,4 @@
-Median iOS
+Carupp iOS
 ============
 
 This is the native iOS code used by https://carupptr.com team
