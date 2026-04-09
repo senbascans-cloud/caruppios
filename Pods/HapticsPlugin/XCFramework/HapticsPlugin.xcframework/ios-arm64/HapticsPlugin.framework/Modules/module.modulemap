@@ -1,0 +1,6 @@
+framework module HapticsPlugin {
+  umbrella header "HapticsPlugin-umbrella.h"
+
+  export *
+  module * { export * }
+}
