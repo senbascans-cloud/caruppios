@@ -1,0 +1,27 @@
+workflows:
+  ios-workflow:
+    name: CarUpp iOS Build
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+    environment:
+      ios_signing:
+        distribution_type: ad_hoc # Test için ad_hoc, market için app_store yapın
+        bundle_identifier: com.carupp.app # Bunu kendi bundle ID'nizle değiştirin
+      vars:
+        XCODE_WORKSPACE: "ios/CarUpp.xcworkspace"
+        XCODE_SCHEME: "CarUpp"
+    scripts:
+      - name: Install CocoaPods
+        script: | 
+          cd ios && pod install
+      - name: Build iOS (.ipa)
+        script: | 
+          xcode-project build-ipa \
+            --workspace "$XCODE_WORKSPACE" \
+            --scheme "$XCODE_SCHEME"
+    artifacts:
+      - build/ios/ipa/*.ipa
+    publishing:
+      email:
+        recipients:
+          - sizin@epostaniz.com # Buraya kendi mailinizi yazın
